@@ -1,0 +1,85 @@
+{
+	"app": {
+		"secret": "Nikhil",
+		"issuer": "localhost",
+		"saltRounds": 12,
+		"emailConfig": {
+			"host": "smtp.zoho.com",
+			"port": 465,
+			"secure": true,
+			"service": "zoho",
+			"user": "reports@cabbagesoft.com",
+			"password": "Reports@123"
+		},
+		"uploads": {
+			"folder": "./uploads",
+			"profile": {
+				"maxSize": 2
+			},
+			"cover": {
+				"maxSize": 3
+			},
+			"csv": {
+				"maxSize": 100,
+				"acceptedFileTypes": ["text/plain", "text/csv"]
+			},
+			"s3" :{
+				"maxAsyncS3": 20,
+				"s3RetryCount": 3,
+				"s3RetryDelay": 1000,
+					"s3Options": {
+					"accessKeyId": "AKIAIEAX4RCECBYPUHPA",
+					"secretAccessKey": "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"
+				},
+				"bucket": "demo"
+    		}
+		},
+		"auth": {
+			"issuer": "locahost",
+			"expires": "10h"
+		},
+		"logger": {
+			"files": {
+				"info": {
+					"name": "info-logs",
+					"path": "./log/demo.info.log"
+				},
+				"error": {
+					"name": "error-logs",
+					"path": "./log/demo.error.log"
+				},
+				"debug": {
+					"name": "debug-logs",
+					"path": "./log/demo.debug.log"
+				}
+			}
+		},
+		"modules": [
+			
+			{
+				"name": "routing",
+				"enable": true
+			},
+			
+			{
+				"name": "accesscontrol",
+				"enable": true
+			},
+			{
+				"name": "users",
+				"enable": true
+			}
+		]
+	},
+	"server": {
+		"port": 3001
+	},
+	"env":"local",
+	"database": {
+		"mongo": "mongodb://127.0.0.1/demo",
+		"redis" : {
+			"host": "127.0.0.1",
+			"port": 6379
+		}
+	}
+}

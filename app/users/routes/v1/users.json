@@ -1,0 +1,19 @@
+{
+  "/login": {
+    "POST": {
+      "route": "login",
+      "policy": []
+    }
+  },
+  "/create": {
+    "POST": {
+      "route": "create",
+      "policy": []
+    }
+  },
+  "/forgotpwd": {
+    "POST": {
+      "route": "forgotpwd",
+      "policy": []
+    }
+  }  }

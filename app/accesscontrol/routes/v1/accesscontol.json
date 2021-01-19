@@ -1,0 +1,14 @@
+{
+    "/accessControl/:accessControlId":{
+        "GET":{
+            "route":"findById",
+            "policy":[]
+        }
+    },
+    "/accessControl/":{
+        "POST":{
+            "route":"create",
+            "policy":[]
+        }
+    }
+}

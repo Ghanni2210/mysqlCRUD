@@ -1,0 +1,14 @@
+{
+    "/routing/:routingId":{
+        "GET":{
+            "route":"findById",
+            "policy":[]
+        }
+    },
+    "/routing/":{
+        "POST":{
+            "route":"create",
+            "policy":[]
+        }
+    }
+}

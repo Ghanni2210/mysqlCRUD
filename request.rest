@@ -1,0 +1,22 @@
+
+### get all 
+GET http://localhost:3000/Employee/
+
+
+###  get by id
+GET http://localhost:3000/Employee/5 HTTP/1.1
+
+
+###  post new
+POST http://localhost:3000/Employee
+Content-Type: application/json
+
+{
+    "Employee_id":0,
+    "Name":"Admin",
+    "Employee_code":"em19",
+    "Salary":654328
+}
+
+###  delete by id
+DELETE http://localhost:3000/Employee/9 HTTP/1.1
